@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio - Katherine Vanessa Calderón Hernández</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#e6e8fa,#bde0fe,#c3fbd8,#fff0f6);color:#222;scroll-behavior:smooth;}
+  header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(255,255,255,0.5);backdrop-filter:blur(10px);border-radius:20px;margin:20px;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .logo{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#d8b4fe,#7dd3fc,#a7f3d0,#fde68a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;}
+  nav a{margin:0 10px;padding:8px 12px;border-radius:12px;transition:0.3s}
+  nav a:hover{background:rgba(255,255,255,0.7)}
+  .bienvenida{text-align:center;padding:40px 20px;background:rgba(255,255,255,0.5);margin:20px auto;border-radius:20px;max-width:800px;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+  .bienvenida h1{font-size:2.2rem;background:linear-gradient(90deg,#a78bfa,#67e8f9,#86efac,#fcd34d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:40px;padding:60px 20px;text-align:left;max-width:1100px;margin:auto;}
+  .hero img{width:280px;height:280px;border-radius:20px;object-fit:cover;border:6px solid rgba(255,255,255,0.6);box-shadow:0 6px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease-in-out;}
+  .hero img:hover{transform:scale(1.05)}
+  .hero div{flex:1;}
+  .hero h1{font-size:2.4rem;background:linear-gradient(90deg,#a78bfa,#67e8f9,#86efac,#fcd34d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;}
+  section{padding:50px 20px;max-width:1000px;margin:auto;text-align:center}
+  h2{font-size:1.8rem;margin-bottom:20px;background:linear-gradient(90deg,#a78bfa,#67e8f9,#86efac,#fcd34d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px;}
+  .card{background:rgba(255,255,255,0.7);padding:20px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.05);transition:transform 0.3s ease, box-shadow 0.3s ease;}
+  .card:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,0,0,0.1);}
+  .card h3{font-size:1.2rem;margin-bottom:6px}
+  .btn-proyecto{display:inline-block;margin-top:10px;padding:10px 18px;background:linear-gradient(90deg,#a78bfa,#67e8f9,#86efac,#fcd34d);color:#fff;font-weight:600;border-radius:10px;transition:transform 0.3s ease, opacity 0.3s ease;}
+  .btn-proyecto:hover{transform:scale(1.05);opacity:0.85;}
+  footer{text-align:center;margin-top:50px;padding:20px;color:#64748b;font-size:0.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">KV</div><div><strong>Katherine Vanessa</strong><br><small>Ingeniería en Sistemas</small></div></div>
+  <nav><a href="#about">Sobre mí</a><a href="#projects">Ejercicios</a><a href="#skills">Habilidades</a><a href="#contact">Contacto</a></nav>
+</header>
+
+<div class="bienvenida">
+<h1>🌷 ¡Bienvenidos a mi portafolio! 🌷</h1>
+<p>Aquí encontrarás mis proyectos📝, habilidades y un poco sobre mí. Gracias por visitar este espacio creado con mucho entusiasmo🥰.</p>
+</div>
+
+<section class="hero">
+<div><h1>🌼Hola, soy Katherine Vanessa Calderón Hernández🌹</h1><p>🌸Estudio Ingeniería en Sistemas. 🤍Me apasiona el baile💃🏻, la lectura📒 y la tecnología👩🏻‍💻. Este es mi espacio donde comparto lo que aprendo y creo💋.</p></div>
+<img src="./img/Vane.jpg" alt="Foto de Katherine Vanessa Calderón Hernández">
+</section>
+
+<section id="projects">
+<h2>Ejercicios</h2>
+<div class="grid-3">
+  <div class="card"><h3>Ejercicio 1 — Conversión de días (con While y Do While)</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(1)">Ver ejercicio</a></div>
+  <div class="card"><h3>Ejercicio 2 — FizzBuzz</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(2)">Ver ejercicio</a></div>
+  <div class="card"><h3>Ejercicio 3 — Verificar si dos palabras son anagramas</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(3)">Ver ejercicio</a></div>
+  <div class="card"><h3>Ejercicio 4 — Conversión de número decimal a binario (sin funciones directas)</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(4)">Ver ejercicio</a></div>
+  <div class="card"><h3>Ejercicio 5 — Verificar si un texto es palíndromo</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(5)">Ver ejercicio</a></div>
+  <div class="card"><h3>Ejercicio 6 — Calcular el MCD y el mcm de dos números enteros</h3><p></p><a href="#" class="btn-proyecto" onclick="verEjercicio(6)">Ver ejercicio</a></div>
+</div>
+</section>
+
+<section id="skills"><h2>Habilidad</h2><p>Redes</p></section>
+<section id="contact"><h2>Contacto</h2><p>📧 kcalderonh1@miumg.edu.gt</p></section>
+
+<footer>© <span id="year"></span> Katherine Vanessa Calderón Hernández — Creado con 💜 colores pastel y pasión.</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Ejercicio 1 ya tiene cargado un ejemplo de código
+if(!localStorage.getItem("Ejercicio 1")){
+  localStorage.setItem("Ejercicio 1", `#include <iostream>
+using namespace std;
+int main(){
+  cout << "Analizando red..." << endl;
+  return 0;
+}`);
+}
+
+// Función para abrir modal
+function verEjercicio(num){
+  const nombre="Ejercicio "+num;
+  const codigo=localStorage.getItem(nombre);
+
+  // Crear fondo del modal
+  const overlay=document.createElement("div");
+  overlay.style.position="fixed";
+  overlay.style.top="0";
+  overlay.style.left="0";
+  overlay.style.width="100%";
+  overlay.style.height="100%";
+  overlay.style.background="rgba(0,0,0,0.6)";
+  overlay.style.display="flex";
+  overlay.style.justifyContent="center";
+  overlay.style.alignItems="center";
+  overlay.style.zIndex="999";
+
+  // Crear contenido del modal
+  const modal=document.createElement("div");
+  modal.style.background="#fff";
+  modal.style.padding="20px";
+  modal.style.borderRadius="15px";
+  modal.style.maxWidth="800px";
+  modal.style.width="90%";
+  modal.style.maxHeight="80%";
+  modal.style.overflow="auto";
+  modal.style.fontFamily="monospace";
+
+  modal.innerHTML=`
+    <h3>${nombre}</h3>
+    <pre style="background:#f7f7f7;padding:10px;border-radius:8px;white-space:pre-wrap;">${codigo ? codigo : "⚠️ No hay archivo cargado aún. Sube uno nuevo."}</pre>
+    <input type="file" id="file${num}" accept=".cpp" style="margin-top:10px">
+    <br>
+    <button style="margin-top:10px;padding:6px 12px;background:#ef4444;color:white;border:none;border-radius:8px;cursor:pointer;" onclick="borrarArchivo('${nombre}', this)">🗑 Borrar archivo</button>
+    <button style="margin-top:10px;padding:6px 12px;background:#a78bfa;color:white;border:none;border-radius:8px;cursor:pointer;" onclick="cerrarModal(this)">Cerrar</button>
+  `;
+
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+
+  // Evento: cuando se sube un archivo
+  const fileInput=modal.querySelector(`#file${num}`);
+  fileInput.addEventListener("change",()=>{
+    if(fileInput.files.length>0){
+      const archivo=fileInput.files[0];
+      const reader=new FileReader();
+      reader.onload=(e)=>{
+        localStorage.setItem(nombre,e.target.result);
+        alert("✅ Archivo guardado en "+nombre);
+        document.body.removeChild(overlay);
+      };
+      reader.readAsText(archivo);
+    }
+  });
+}
+
+// Cerrar modal
+function cerrarModal(btn){
+  document.body.removeChild(btn.parentElement.parentElement);
+}
+
+// Borrar archivo
+function borrarArchivo(nombre, btn){
+  if(confirm("¿Deseas eliminar el archivo de "+nombre+"?")){
+    localStorage.removeItem(nombre);
+    alert("🗑 Archivo eliminado correctamente.");
+    document.body.removeChild(btn.parentElement.parentElement);
+  }
+}
+</script>
+</body>
+</html>
