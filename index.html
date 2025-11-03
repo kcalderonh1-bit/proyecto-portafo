@@ -268,40 +268,72 @@ int main() {
 function verEjercicio(num) {
   const codigo = codigosEjercicios[num];
 
-  // Mapeo de nombres de ejercicios
+  // Mapeo de nombres de ejercicios con estilo
   const nombres = {
-    1: "Conversión de días (While y Do-While)",
-    2: "FizzBuzz",
-    3: "Anagramas",
-    4: "Decimal a Binario",
-    5: "Palíndromo",
-    6: "MCD y MCM"
+    1: "🌸 Conversión de días (While y Do-While)",
+    2: "🌼 FizzBuzz",
+    3: "💎 Anagramas",
+    4: "🌷 Decimal a Binario",
+    5: "🌺 Palíndromo",
+    6: "🌻 MCD y MCM"
   };
 
+  // Fondo difuminado del modal
   const overlay = document.createElement("div");
   overlay.style.cssText =
-    "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;z-index:999;padding:20px;";
+    "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;z-index:999;padding:20px;backdrop-filter:blur(6px);";
 
+  // Cuadro del modal
   const modal = document.createElement("div");
   modal.style.cssText =
-    "background:#fff;padding:25px;border-radius:18px;max-width:900px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 15px 40px rgba(0,0,0,0.3);font-family:monospace;position:relative;";
+    "background:#fff;padding:25px;border-radius:20px;max-width:900px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 15px 40px rgba(0,0,0,0.3);font-family:monospace;position:relative;animation:fadeIn 0.6s ease;";
 
+  // Contenido del modal con encabezado elegante
   modal.innerHTML = `
-    <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;border-bottom:2px solid #a78bfa;padding-bottom:10px;'>
-      <h3 style='margin:0;font-size:1.4rem;color:#111;font-weight:800;'>${nombres[num]}</h3>
+    <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;border-bottom:3px solid #a78bfa;padding-bottom:10px;'>
+      <h3 style="
+        margin:0;
+        font-size:1.5rem;
+        font-weight:800;
+        background:linear-gradient(90deg,#a78bfa,#67e8f9,#86efac,#fcd34d);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      ">
+        ${nombres[num]}
+      </h3>
       <button onclick='this.parentElement.parentElement.parentElement.remove()' 
-        style='background:none;border:none;font-size:1.8rem;cursor:pointer;color:#999;'>×</button>
+        style='background:none;border:none;font-size:1.8rem;cursor:pointer;color:#999;transition:0.3s;'>
+        ×
+      </button>
     </div>
-    <pre style='background:#f8f9fa;padding:18px;border-radius:10px;white-space:pre-wrap;
-    font-size:0.95rem;line-height:1.5;overflow-x:auto;border:1px solid #e9ecef;'>${codigo
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")}</pre>
+
+    <pre style='
+  background:#f5fbff;
+  padding:18px;
+  border-radius:14px;
+  white-space:pre-wrap;
+  font-size:0.95rem;
+  line-height:1.5;
+  overflow-x:auto;
+  border:0.8px solid transparent;
+  background-image:
+    linear-gradient(#f5fbff, #f5fbff),
+    linear-gradient(90deg,#bcdcff,#a7f3d0,#fdf3b0);
+  background-origin:border-box;
+  background-clip:content-box, border-box;
+  box-shadow:0 0 4px rgba(100,180,255,0.12);
+  color:#333;
+'>
+${codigo.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
+    </pre>
   `;
 
   overlay.appendChild(modal);
   document.body.appendChild(overlay);
 }
 
+
 </script>
 </body>
 </html>
+
